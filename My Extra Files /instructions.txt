@@ -1,0 +1,166 @@
+------------- React Js From Beginer To Advanced ----------
+
+1. Introduction 
+    React js is a JavaScript library for building user interfaces.
+    React is used to build single page applications. 
+    React Allows us to create reusable bit of code/components. 
+    React Was build By facebook. 
+    The main focus is to building UI as fast as possible. 
+    React Uses Virtual DOM. 
+    React Runs on Default port localhost:3000 
+    First Released on 29th may 2013. 
+
+2. prerequisite before learn react js
+    Before you can code using React, you must have basic knowledge of :
+    1) HTML 
+    2) CSS 
+    3) JavaScript 
+    4) ES6 
+    5) NPM or YARN 
+
+    Note => Node Js And Npm Must Be installed in your pc to getting started with react. 
+    Also git bash should be installed.
+
+3. CMD basics commands or NPM basics commands 
+    let's discuss some important cmd or npm commands 
+    1) CMD commands 
+        1. PWD
+            full pathname of working directory 
+        2. LS 
+            list of directory 
+        3. MKDIR 
+            create directory 
+        4. CD 
+            change directory 
+        5. CD..
+            one level up directory 
+        6. clear 
+            clean the terminal 
+        7. Arrow key up / down 
+            previous commands 
+        
+    2) NPM commands 
+        1. NPM init 
+            create package.json file 
+        2. Npm install <package-name> --save 
+            Install package locally 
+        3. npm install <package-name> -g 
+            install package globaally (sudo)
+        4. npm install <package-name> --save-dev 
+            use only in development mode 
+    
+4. React js without installation using cdn links  
+    Add Links in Head Tags 
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+    Now in Script you can write React like this-
+    
+    <script type="text/babel">
+        function App (){
+            return ( <h2> Hello world </h2>);
+        }
+        ReactDOM.render(<App />, document.getElementById('root'))
+    </script>
+
+    Note => This way is not for project development this is only for learning purpose 
+    for use of project we will use create-react-app installation process. 
+    CDN Links is not Recommended this is only for testing purpose. 
+
+5. React Js installation (create-react-app) 
+    For install globally create react app command 
+    npm install -g create-react-app 
+
+    for checking version installed in your pc use 
+    create-react-app --version 
+
+    create a react app directly 
+    create a folder inside your folder run create app command for create an react app like: 
+
+    npx create-react-app ecommerce-app 
+    cd ecommerce-app 
+    yarn start 
+
+    it will create a reaact app names as ecommerce-app 
+    by yarn start 
+    it will start serve on localhost:3000 
+
+6. File Structure 
+    1) Node Modules 
+        node Modules contain all the required packages. 
+    2) Public Folder 
+        public folder contain a root html file. (index.html) and favicons etc. 
+        starting Public file =>         public/index.html
+    3) src Folder 
+        src folder is our main folder where we will start our works 
+        All Logic Files Comes Inside This Folder . 
+        We will write our code in src folder. 
+        starting logic file is =>       src/index.js
+    4) .gitignore
+        this file is used to ignore file when push code on github 
+    5) package.json 
+        it contains all required dependency and versions. 
+    6) README.md 
+        it is just a text file used for github code push.
+    7) yarn.lock  
+       it contains all required dependency and versions in packages information in detail.
+    
+7. Clean Boiler plate and understanding main logic file which is src/index.js
+    delete all files in public folder except index.html 
+    now in index.html files remove all unnecessary comments and unneceesary links tag. 
+    inside index.html file there is a div with id root 
+     
+        <div id="root">
+        
+        </div>
+
+    now delete all files in src folder 
+
+    now we need a main logic file inside our src folder which is index.js 
+    so create index.js inside src folder. 
+    this is our main logic file . 
+
+    src/index.js
+
+            //1. import area 
+            //Formula :
+            //import something from 'something';
+            import React from 'react';
+            import ReactDOM from 'react-dom';
+
+            //2. components area 
+            function App(){
+                return <h1> Hello world</h1>
+            }
+
+            //3. object.method 
+            ReactDOM.render( <App />, document.getElementById('root'));
+
+            note: this document.getElementById('root') root comes from public/index.html file.
+
+8. Components In React 
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     Official link of React Js documentation 
+     https://reactjs.org/docs/getting-started.html
+
+---------------------------------------------------End--------------------------------------------------------------
