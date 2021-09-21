@@ -76,13 +76,13 @@
     create-react-app --version 
 
     create a react app directly 
-    create a folder inside your folder run create app command for create an react app like: 
+    create a directory inside your working folder run create app command for create an react app like: 
 
     npx create-react-app ecommerce-app 
     cd ecommerce-app 
     yarn start 
 
-    it will create a reaact app names as ecommerce-app 
+    it will create a react app names as ecommerce-app 
     by yarn start 
     it will start serve on localhost:3000 
 
@@ -140,25 +140,170 @@
             note: this document.getElementById('root') root comes from public/index.html file.
 
 8. Components In React 
+    1. Components Are independent and reusable Bit of Code.
+    2. Components always return JSX (html).
+    3. It only return single element.
+    4. Components Name must be in pascal case as PascalCase
+    5. We don't want to mash all the code in one file. that's y we create separate components .
     
+    There are mainly two types of components 
+    1) Functional components or Arrow Functional components 
+    2) Class components 
+
+        1) Functional Components 
+            Functional components functions s bnte s 
+            and it always return jsx. 
+
+        for example Functional component 
+        now create a componets App.js
+
+            function App(){
+                return <h1> Hello world</h1>
+            }
+            export default App;
+
+        and import this code in index.js file 
+
+            import App from './App';
+            ReactDOM.render( <App />, document.getElementById('root'));
+
+        for example Arrow Functional Components 
+            const App = () => {
+                return <h1> Hello world</h1>
+            }
+            export default App;
+
+            if return only single element then no need to write return keyword in arrow function. 
+             const App = () => <h1> Hello world</h1>
+            export default App;
+
+        2) Class Components 
+            class components class s bnte h. 
+            there must be a render method in class component 
+            render method always return JSX (html)
+
+                class App extends React.Component {
+                    render(){
+                        return (
+                            <h1> Hello world</h1>
+                        );
+                    }
+                }
+                export default App;
+
+            If using Constructor then there must be called super method . 
+                class App extends React.Component {
+                    constructor (){
+                        super();
+                        console.log('hello i am construtor')
+                    }
+                    render(){
+                        return (
+                            <h1> Hello world</h1>
+                        );
+                    }
+                }
+                export default App;
+
+9. Nested Components And Import And Export 
+    Components Can contain Other Components as parent child this is called Nested Components.
+        for create components create a separate components folder inside src folder
+        and keep all your components in separate components folder 
+
+        //Nested  Components Example 
+
+        function One () {
+            return (
+                <div>
+                    <h1>I am One</h1>
+                    <Two />                 //this is called nested components
+                </div>
+            );
+        }
+
+        function Two(){
+            return (
+                <div>
+                    <h1>I am Two</h1>
+                </div>
+            );
+        }
+
+        export default One;
+
+        Import And Export---
+
+        1) Default Export ko kisi bhi name s import kar skte hai 
+        for example 
+            export default Home; 
+            now import in another page as
+            import HomePage from './Home'; 
+
+            use this component like 
+            <HomePage />
+                or 
+            also use like 
+            <HomePage></HomePage> 
+
+        2) Named Export ko curly braces m same name s likh k access kia jata h 
+        for example 
+            export { Home };
+            now import in another page as 
+            import { Home } from './Home';   
+
+            use this component like 
+            <Home />   
+                or 
+            also use like 
+            <Home></Home> 
+
+10. JSX 
+    JavaScript And XML (extensible markup language)
+    Rules= 
+        1. Must contain A closing Tag of all element.
+            example
+            <img src="" alt >               //this is wrong we can not use this
+            <img src="" alt="" />           //this is right bcoz it have closing tag
+
+        2. return single element like div , section, article, react fragment or <></>
+            example 
+                //This is Wrong we can only return single element 
+                function AboutJsx() {
+                    return (
+                        <h1>Hello jsx</h1>
+                        <h2>Welcome</h2>
+                    )
+                }
+
+                //This is Right we can only return single element 
+                function AboutJsx() {
+                    return (
+                        <React.Fragment>
+                            <h1>Hello jsx</h1>
+                            <h2>Welcome</h2>
+                        </React.Fragment>
+                   )
+                }
+
+                //one parent inside a parent there must be so many element
+                // we can wrap all with <div></div>
+                 or <React.Fragment></React.Fragment>
+                 or syntactic sugar form of react fragment is 
+                 <> all element inside it </>
 
 
+        3. use camelCase for Html attribute 
+            for example 
+            <button onclick="alert('hello ')"> Click Me</button>        //wrong
+            <button onclick={ alert('hello')}> Click Me</button>        //right
 
+        4. className instead of class. 
+            <h1 class="heading">Helloo</h1>             //wrong
+            <h1 className="heading">Helloo</h1>         //right
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        5. react internally uses JSX which uses babel to convert js.
+        6. JSX means write Html and js together. 
+        7. Write JavaScript inside expressions which is curly braces { 5 + 5 }
 
      Official link of React Js documentation 
      https://reactjs.org/docs/getting-started.html

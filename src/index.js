@@ -3,10 +3,9 @@
 //import something from 'something';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './App';
 
 //2. components area 
-function App(){
-    return <h1> Hello world</h1>
-}
+
 //3. object.method 
 ReactDOM.render( <App />, document.getElementById('root'));
