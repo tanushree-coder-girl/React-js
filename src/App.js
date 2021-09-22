@@ -2,6 +2,9 @@ import React from 'react';
 import Navbar from './components/Navbar';           // default export
 import {Home} from './components/Home'              //named export 
 import AboutJsx from './components/AboutJsx';          
+import Events from './components/Events';          
+import PropStateFunctionalComp from './components/PropStateFunctionalComp';
+import PropStateClassComp from './components/PropStateClassComp';
 
 function App () {
     return (
@@ -9,11 +12,21 @@ function App () {
             <Navbar />
             <Home />
             <AboutJsx />
+            <Events/>
+
+            {/* props function component*/}
+            <PropStateFunctionalComp name={'xyz'} email={'xuz@gmail.com'}/>
+            <PropStateFunctionalComp name={'rim'} email={'rim@gmail.com'}/>
+
+            {/* props in class component */}
+            <PropStateClassComp  name={'xyz'} email={'xuz@gmail.com'} />
+            <PropStateClassComp  name={'1234567'} email={'chawin@gmail.com'} />
         </>
     );
 }
 
 export default App;
+
 
 //1. Functional Components
 // function App(){

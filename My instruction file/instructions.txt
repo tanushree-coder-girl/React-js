@@ -305,6 +305,124 @@
         6. JSX means write Html and js together. 
         7. Write JavaScript inside expressions which is curly braces { 5 + 5 }
 
+11. Events In JavaScript 
+    React can perform action based on user events. 
+    React has the same events as html click, change, mouse over, dblclick etc.
+    React Events are written in camelCase syntx. 
+    React Event Handlers are written inside curly braces.
+        for example 
+
+        const sendData = () => {
+            alert('button is clicked');
+        }
+
+        <button onclick={ sendData }> Click Me </button>
+            or 
+        <button onClick={()=>sendData()}> Click Me </button>
+            or 
+        <button onClick={()=>alert('button is clicked')}> Click Me </button>
+
+12. Props and state in functional components 
+    Props are arguements / parameterd passed into react component. 
+    Props are used to pass data from a parent component to child component.
+    Props are read only.
+    props is immutable.
+
+    example of props in functional components are- 
+        const Cards = (props) => {
+            return (
+                <div>
+                    <h1>name : {props.name} </h1>
+                    <h2>Email : {props.email}</h2>
+                </div>
+            )
+        }
+        export default Cards;
+
+        {/* props */}
+        <Cards name={'xyz'} email={'xuz@gmail.com'}/>
+        <Cards name={'rim'} email={'rim@gmail.com'}/>
+
+    State Data can be modified by its own component. but its private cannot be accessed from outside.
+    when state change the comnponent re-render.
+    state is mutable.
+
+    example of state in functional components
+        using hook useState 
+
+        import React, {useState} from 'react';
+
+        function MyComp () {
+            const [count, setCount] = useState(0);
+
+            return (
+                <>
+                    <h1> { count }</h1>
+                    <button onClick={()=> setCount(count + 1)}> Update Num</button>
+                </>
+            );
+        }
+        export default MyComp;
+
+13. Props and state in class components 
+        example of props in class components are- 
+
+            export default class PropStateClassComp extends Component {
+                render(){
+                    console.log(this.props);
+                    return (
+                        <h1>name : {this.props.name} </h1>
+                        <h2>Email : {this.props.email}</h2>
+                    );
+                }
+            }
+
+            {/* props in class component */}
+            <PropStateClassComp  name={'xyz'} email={'xuz@gmail.com'} />
+            <PropStateClassComp  name={'1234567'} email={'chawin@gmail.com'} />
+
+        example of state in class components
+            export default class PropStateClassComp extends Component {
+                constructor(){
+                    super();
+                    this.state = {
+                        count : 0
+                    }
+                }
+                render(){
+                    return (
+                        <h1> {this.state.count} </h1>
+                        <button onClick={()=> this.setState({ count : this.state.count+1})}> increment Num</button>
+                    );
+                }
+            }
+
+14. Form Handling in React 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
      Official link of React Js documentation 
      https://reactjs.org/docs/getting-started.html
 
