@@ -307,7 +307,7 @@
 
 11. Events In JavaScript 
     React can perform action based on user events. 
-    React has the same events as html click, change, mouse over, dblclick etc.
+    React has the same events as html onClick, onChange, onMouseEnter , onDoubleClick etc.
     React Events are written in camelCase syntx. 
     React Event Handlers are written inside curly braces.
         for example 
@@ -397,10 +397,26 @@
                 }
             }
 
-14. Form Handling in React 
+14. Conditional Statements or ternary operator 
+    check if else Conditional using ternary operator like 
 
+        const [isLoggedIn, setisLoggedIn] = useState(false)
+        return (
+            {
+                isLoggedIn ? <h1> Welcome To Dashboard </h1> : <h1> kindly login </h1>
+            }
+        );
 
+    for detail example see file : components/Conditional.js
 
+15. Form Handling in React 
+    Just like in HTML, React Uses forms to allow users to interact with the web page.
+
+    for get value of input box we uses onChange event like: 
+    for storing value we use useState for example => 
+
+    const [inputValue, setInputValue] = useState(null);
+    <input type="text" onChange={ (event)=>setInputValue(event.target.value)} value={inputValue} />
 
 
 

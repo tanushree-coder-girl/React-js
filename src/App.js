@@ -5,7 +5,8 @@ import AboutJsx from './components/AboutJsx';
 import Events from './components/Events';          
 import PropStateFunctionalComp from './components/PropStateFunctionalComp';
 import PropStateClassComp from './components/PropStateClassComp';
-
+import Conditional from './components/Conditional';
+import Form from './components/Form';
 function App () {
     return (
         <>
@@ -21,6 +22,10 @@ function App () {
             {/* props in class component */}
             <PropStateClassComp  name={'xyz'} email={'xuz@gmail.com'} />
             <PropStateClassComp  name={'1234567'} email={'chawin@gmail.com'} />
+
+            <Conditional />
+
+            <Form />
         </>
     );
 }
