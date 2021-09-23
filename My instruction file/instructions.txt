@@ -468,7 +468,93 @@
         src/components/ComplexForm.js 
         for know in details about complex form Handling
     
-16. React LifeCycle Method . 
+16. React LifeCycle Method .
+    React LifeCycle Method is use with class Components only. 
+    Each component in react has a different lifecycles method which you can monitor during its three phases.
+
+    The three phases are- 
+    1) Mounting 
+    2) Updating 
+    3) Unmounting 
+
+        1) Mounting => Mounting means putting elements into the dom.
+        react has 4 built in methods that gets called , in this order when mounting a components. 
+            1) constructor()
+            2) getDerivedStateFromProps() 
+            3) render()
+            4) componentDidMount() 
+
+                1) constructor
+                    A method to initialize the property or state Varaibles. 
+                    Constructor is called one time before the view is rendered . 
+                    It is not mandatory to take the controller in class component.
+                    Must Call Super() method in constructor 
+
+                    constructor (){
+                        super();
+                        console.log('constructor called before view is rendered')
+                    }
+
+                2) getDerivedStateFromProps 
+                    The getDerivedStateFromProps method is called right before the render method.
+                    This is the natural place to set the state object based on the initial props.
+                    this method called every time whn state updates.
+
+                    static getDerivedStateFromProps(props, state) {
+                        return {  count : props.counting}
+                    }
+                   <App counting={1000}/>
+
+                3) render
+                    The render() method is required, and is the method that actually outputs the HTML to the DOM.
+                    Compulsory method 
+                    this method re-render every time when state and props update. 
+
+                    render(){
+                        return(
+                            <h1>Hello render method</h1>
+                        );
+                    }
+                
+                4) componentDidMount 
+                    The componentDidMount method is called once after the view is completely rendered.
+                    Mostly this is used for api calling. 
+                    it does not call when state updates. 
+
+                    componentDidMount(){
+                        console.log('componentDidMount ,metohd')
+                    }
+
+                practically on file src/componets/MountLifeCycleMethod.js
+
+        2) Updating => A componet is updated whenever there is change in componet state or props. 
+        react Has five built in methods that gets called in thus order whenever a componet is updated. 
+            1) getDerivedStateFromProps() 
+            2) shouldComponentUpdate ()
+            3) render()
+            4) getSnapShotBeforeUpdate() 
+            5) componetDidUpdate()
+
+            practically on file src/componets/UpdateLifeCycleMethod.js
+
+        3) Unmounting => When a Component is removed from the dom it is called Unmounting. 
+        react has one built in method that gets called when component is removed or Unmount. 
+            1) componentWillUnmount()
+
+                componentWillUnmount(){
+                    alert('the child componet is removed')
+                }
+
+                practically on file src/componets/UnmountLifeCycleMethod.js
+    
+17. React Hooks => useEffect 
+
+
+
+
+
+
+
 
 
 

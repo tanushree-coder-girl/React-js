@@ -8,6 +8,8 @@ import PropStateClassComp from './components/PropStateClassComp';
 import Conditional from './components/Conditional';
 import Form from './components/Form';
 import ComplexForm from './components/ComplexForm';
+import MountLifeCycleMethod from './components/MountLifeCycleMethod'
+import UnmountLifeCycleMethod from './components/UnmountLifeCycleMethod';
 
 function App () {
     return (
@@ -30,6 +32,10 @@ function App () {
             <Form />
 
             <ComplexForm />
+
+            <MountLifeCycleMethod counting={1000}/>
+
+            <UnmountLifeCycleMethod />
         </>
     );
 }
