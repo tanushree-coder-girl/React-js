@@ -291,7 +291,9 @@
                  or syntactic sugar form of react fragment is 
                  <> all element inside it </>
 
-
+            What is React Fragment 
+                A common pattern in React is for a component to return multiple elements. Fragments let you group a list of children without adding extra div to the DOM.
+                
         3. use camelCase for Html attribute 
             for example 
             <button onclick="alert('hello ')"> Click Me</button>        //wrong
