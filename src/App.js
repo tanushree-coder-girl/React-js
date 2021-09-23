@@ -7,6 +7,8 @@ import PropStateFunctionalComp from './components/PropStateFunctionalComp';
 import PropStateClassComp from './components/PropStateClassComp';
 import Conditional from './components/Conditional';
 import Form from './components/Form';
+import ComplexForm from './components/ComplexForm';
+
 function App () {
     return (
         <>
@@ -26,6 +28,8 @@ function App () {
             <Conditional />
 
             <Form />
+
+            <ComplexForm />
         </>
     );
 }

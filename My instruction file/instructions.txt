@@ -412,11 +412,62 @@
 15. Form Handling in React 
     Just like in HTML, React Uses forms to allow users to interact with the web page.
 
-    for get value of input box we uses onChange event like: 
-    for storing value we use useState for example => 
+    for get value of input box we uses onChange event 
+    for storing value we use useState
+    for example => 
 
     const [inputValue, setInputValue] = useState(null);
     <input type="text" onChange={ (event)=>setInputValue(event.target.value)} value={inputValue} />
+
+
+    2) Print Value onSubmit form--
+
+        import { useState } from 'react'
+
+        export default function Form() {
+            const [email, setemail] = useState('');
+            const [password, setpassword] = useState('');
+
+            const [showData, setShowData] = useState({emailAdd:'', mypassword:''})
+
+            // stop form from submit on button click 
+            const onSubmitForm = (event) => {
+                event.preventDefault();
+            }
+
+            //show data on submit when button clicked
+            const submittedData = () => {
+                setShowData({
+                    emailAdd: email,
+                    mypassword : password
+                })
+                setpassword('')
+                setemail('')
+            }
+            return (
+                <>
+                    <h1>Your email is {showData.emailAdd} and password is {showData.mypassword}</h1>
+
+                    <form onSubmit={ onSubmitForm}>
+                        <label htmlFor="email"> User Email</label>
+                        <input type="email" id="email" onChange={(e)=>setemail(e.target.value)} value={email} />
+                        <label htmlFor="password">Password</label>
+                        <input type="password" id="password" onChange={(e)=>setpassword(e.target.value)} value={password}/>
+                        <button onClick={submittedData}>submit</button>
+                    </form>
+                </>
+            )
+        }
+
+    3)Complex Form Multiple field
+        Use only One State Varaibles To manage All input field.
+
+        See file ComplexForm.js 
+        src/components/ComplexForm.js 
+        for know in details about complex form Handling
+    
+16. React LifeCycle Method . 
+
 
 
 
