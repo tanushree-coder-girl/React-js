@@ -1,4 +1,3 @@
-import { render } from '@testing-library/react';
 import React, { Component } from 'react'
 
 export default class UnmountLifeCycleMethod extends Component {
@@ -24,6 +23,7 @@ class SecondComp extends Component{
     //componetWillunmount 
     componentWillUnmount(){
         alert('Component is removeed from dom')
+        console.log('component will unmount : Unmoutnig phase')
     }
 
     render(){

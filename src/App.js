@@ -1,31 +1,33 @@
 import React from 'react';
 import Navbar from './components/Navbar';           // default export
-import {Home} from './components/Home'              //named export 
-import AboutJsx from './components/AboutJsx';          
-import Events from './components/Events';          
+import { Home } from './components/Home'              //named export 
+import AboutJsx from './components/AboutJsx';
+import Events from './components/Events';
 import PropStateFunctionalComp from './components/PropStateFunctionalComp';
 import PropStateClassComp from './components/PropStateClassComp';
 import Conditional from './components/Conditional';
 import Form from './components/Form';
 import ComplexForm from './components/ComplexForm';
 import MountLifeCycleMethod from './components/MountLifeCycleMethod'
+import UpdateLIfeCycleMethod from './components/UpdateLifeCycleMethod';
 import UnmountLifeCycleMethod from './components/UnmountLifeCycleMethod';
+import LifeCycleFunctionalCompUseEffect from './components/LifeCycleFunctionalCompUseEffect';
 
-function App () {
+function App() {
     return (
         <>
             <Navbar />
             <Home />
             <AboutJsx />
-            <Events/>
+            <Events />
 
             {/* props function component*/}
-            <PropStateFunctionalComp name={'xyz'} email={'xuz@gmail.com'}/>
-            <PropStateFunctionalComp name={'rim'} email={'rim@gmail.com'}/>
+            <PropStateFunctionalComp name={'xyz'} email={'xuz@gmail.com'} />
+            <PropStateFunctionalComp name={'rim'} email={'rim@gmail.com'} />
 
             {/* props in class component */}
-            <PropStateClassComp  name={'xyz'} email={'xuz@gmail.com'} />
-            <PropStateClassComp  name={'1234567'} email={'chawin@gmail.com'} />
+            <PropStateClassComp name={'xyz'} email={'xuz@gmail.com'} />
+            <PropStateClassComp name={'1234567'} email={'chawin@gmail.com'} />
 
             <Conditional />
 
@@ -33,9 +35,14 @@ function App () {
 
             <ComplexForm />
 
-            <MountLifeCycleMethod counting={1000}/>
+            <MountLifeCycleMethod counting={1000} />
+
+            <UpdateLIfeCycleMethod counting={100000}/>
 
             <UnmountLifeCycleMethod />
+
+            <LifeCycleFunctionalCompUseEffect />
+
         </>
     );
 }

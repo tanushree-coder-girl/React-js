@@ -64,7 +64,7 @@ const ComplexForm = () => {
             </div>
             <div>
                 <label htmlFor="email">Email</label>
-                <input type="email" name="email" id="email"  onChange={inputHandler} value={formData.email}/>
+                <input type="email" name="email" onChange={inputHandler} value={formData.email}/>
             </div>
             <input type="submit" value="Submit Form" onClick={showData} />
         </form>

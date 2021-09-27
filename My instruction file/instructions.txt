@@ -535,10 +535,46 @@
             4) getSnapShotBeforeUpdate() 
             5) componetDidUpdate()
 
+                1) getDerivedStateFromProps()
+                    same as mounting phase 
+                    line : 498 
+                
+                2) shouldComponentUpdate 
+                    In this method you can return a boolean value that specifies whether react should continue with the rendering or not . 
+
+                    the default value is true 
+
+                    shouldComponentUpdate (){
+                        return false;
+                    }
+
+                    it will stop render method to rerender
+                
+                3) render();
+                    same as mounting phase 
+                    line : 508 
+                
+                4) getSnapShotBeforeUpdate
+                    In this method you can access props , and state before the update , in short that even after the update , you can check the previous value or what the value before the update. 
+                    If the getSnapShotBeforeUpdate method is present than you have to also include componetDidUpdate method otherwise it will give errors. 
+
+                    getSnapShotBeforeUpdate (prevProps , prevState){
+                        console.log('the previous state is: ' + prevState);
+                    }
+                
+                5) componetDidUpdate 
+                    this method is called after the componets is updated in the dom. 
+
+                    componetDidUpdate (){
+                        alert('the componetDidUpdate called')
+                    }
+
             practically on file src/componets/UpdateLifeCycleMethod.js
 
         3) Unmounting => When a Component is removed from the dom it is called Unmounting. 
-        react has one built in method that gets called when component is removed or Unmount. 
+        react has one built in method that gets called when component is removed or Unmount.
+        This method must be written in the component which have to be removed or Unmount. 
+
             1) componentWillUnmount()
 
                 componentWillUnmount(){
@@ -547,7 +583,39 @@
 
                 practically on file src/componets/UnmountLifeCycleMethod.js
     
-17. React Hooks => useEffect 
+17. React Hooks => useEffect
+    Hooks Are The Main Features Introduced in the react 16+ version. 
+    It allows you to use state and react Features without writing a class componets. 
+    Hooks does not works inside class comnponent. 
+    Hooks should always be used at the top level of the of the react functions. 
+    Hooks are the functions which HOOk into react state and lifecycles Features from functions componets . 
+
+    1) useState 
+        We use useState hooks for use state or setState Varaible inside functional componets. 
+        example 
+
+        import {useState} from 'react';
+
+        function test(){
+            const [ name, setName] = useState('tanu');
+            return (
+                <>
+                    <h1> My name is {name}</h1>
+                    <button onClick={()=>setName('Tanushri')}> Full Name </button>
+                </>
+            );
+        }
+
+    2) useEffect 
+        We use useEffect Hooks for react lifecycles method inside functional componets.
+        All lifecycles Method is in this one hook useEffect Hooks. 
+        Combination of componentDidMount , componetDidUpdate, componentWillUnmount
+
+        example => 
+
+
+
+
 
 
 
