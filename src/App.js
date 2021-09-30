@@ -15,6 +15,12 @@ import LifeCycleFunctionalCompUseEffect from './components/LifeCycleFunctionalCo
 import Styling from './components/Styling';
 import Bootstrap from './components/Bootstrap';
 import Looping from './components/Looping';
+import Parent from './components/Parent';
+import PureComponents from './components/PureComponents';
+import UseMemoHook from './components/UseMemoHook';
+import RefClassComp from './components/RefClassComp';
+import UseRefHook from './components/UseRefHook';
+import ForwardRefHook from './components/ForwardRefHook';
 
 function App() {
     return (
@@ -51,6 +57,18 @@ function App() {
             <Bootstrap />
 
             <Looping />
+
+            <Parent />
+
+            <PureComponents/>
+
+            <UseMemoHook/>
+
+            <RefClassComp/>
+
+            <UseRefHook/>
+
+            <ForwardRefHook/>
 
         </>
     );

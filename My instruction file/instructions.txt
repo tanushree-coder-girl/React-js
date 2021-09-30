@@ -307,6 +307,8 @@
         6. JSX means write Html and js together. 
         7. Write JavaScript inside expressions which is curly braces { 5 + 5 }
 
+        practical on file => src/components/AboutJsx.js
+
 11. Events In JavaScript 
     React can perform action based on user events. 
     React has the same events as html onClick, onChange, onMouseEnter , onDoubleClick etc.
@@ -323,6 +325,8 @@
         <button onClick={()=>sendData()}> Click Me </button>
             or 
         <button onClick={()=>alert('button is clicked')}> Click Me </button>
+
+        practical on file => src/components/Events.js
 
 12. Props and state in functional components 
     Props are arguements / parameterd passed into react component. 
@@ -366,6 +370,8 @@
         }
         export default MyComp;
 
+    practically on file => src/components/PropStateFunctionalComp.js
+
 13. Props and state in class components 
         example of props in class components are- 
 
@@ -398,6 +404,7 @@
                     );
                 }
             }
+     practically on file => src/components/PropStateFunctionalComp.js
 
 14. Conditional Statements or ternary operator 
     check if else Conditional using ternary operator like 
@@ -409,7 +416,7 @@
             }
         );
 
-    for detail example see file : components/Conditional.js
+     practically on file => src/components/Conditional.js
 
 15. Form Handling in React 
     Just like in HTML, React Uses forms to allow users to interact with the web page.
@@ -467,7 +474,10 @@
         See file ComplexForm.js 
         src/components/ComplexForm.js 
         for know in details about complex form Handling
-    
+
+    practically on file => src/components/Form.js
+    practically on file => src/components/ComplexForm.js
+
 16. React LifeCycle Method .
     React LifeCycle Method is use with class Components only. 
     Each component in react has a different lifecycles method which you can monitor during its three phases.
@@ -626,7 +636,6 @@
        
         practically on file src/componets/LifeCycleFunctionalCompuseEffect.js
 
-
 18. Styles
     3 types of giving styling in react.
     1) External css 
@@ -698,6 +707,83 @@
     practically on file src/componets/Looping.js
 
 21) React Js send data from parent to child 
+    Is is also Known as lifting state up 
+
+    const Parent = () => {
+        const handleEvent = (receiveData)=> {
+            alert(receiveData)
+        }
+        return (
+            <div>
+                <h1>Hello i am parnet</h1>
+                <Child handleEvent={handleEvent} />
+            </div>
+        )
+    }
+    const Child = (props) => {
+        const data = 'Hello welcome from child component'
+        return (
+            <div>
+                <h1>Hello i am child</h1>
+                <button onClick={()=>props.handleEvent(data)}> Child Click</button>
+            </div>
+        )
+    }
+
+    Practically Example on file src/componets/Parent.js
+    Practically Example on file src/componets/Child.js
+
+22). Pure Component
+        pure component used with class component.
+        Pure Components in React are the components which do not re-renders when the value of state and props has been updated with the same values. If the value of the previous state or props and the new state or props is the same, the component is not re-rendered.
+
+        import { PureComponent } from 'react';
+
+        export default class PureComponents extends PureComponent {
+            render(){
+                
+            }
+        }
+
+        practically Example on file => src/components/PureComponents.js
+
+23) UseMemo Hook 
+    use memo hook works same as PureComponent 
+    we use PureComponent in class component 
+    and for functional component we use usememo hooks 
+
+    let memoFun = useMemo(function myFun(){
+        return count * 20
+    },[count])
+
+    practically Example on file => src/components/UseMemoHook.js
+
+24) Ref in React 
+    When a ref is passed to an element in render, a reference to the node becomes accessible at the current attribute of the ref.
+
+    with the help of ref you can manipulate dom element.
+
+    example 
+    practically Example on file => src/components/RefClassComp.js
+
+25) useRef hooks 
+    used in functional component to access dom element 
+
+    example 
+    practically Example on file => src/components/UseRefHook.js
+
+26) Forward Ref
+    used for forward ref from parent component to child component
+
+    example 
+    practically Example on file => src/components/ForwardRefHook.js
+    practically Example on file => src/components/ForwardRefHookComp.js
+
+27) Controlled Components 
+
+28) Uncontrolled Components
+
+
 
 
 

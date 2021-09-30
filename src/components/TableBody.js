@@ -14,13 +14,10 @@ const TableBody = ({students}) => {
                   <tbody>
                     {student.address.map((add, id) => {
                       return (
-                          <>
-                          <tr>
+                          <tr key={id}>
                             <td>{add.city}</td>
                             <td>{add.state}</td>
                           </tr>
-                          </>
-                      
                       );
                     })}
                     </tbody>
