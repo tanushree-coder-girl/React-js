@@ -2,8 +2,6 @@ import { Table } from "react-bootstrap";
 import TableBody from "./TableBody";
 
 const Looping = () => {
-  const fruits = ["apple", "mango", "grapes"];
-
   const students = [
     {
       id: 1,

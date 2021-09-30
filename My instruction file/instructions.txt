@@ -780,8 +780,42 @@
     practically Example on file => src/components/ForwardRefHookComp.js
 
 27) Controlled Components 
+    Controlled Components is one in which form or input field is controlled by state. 
+    React Recommended controlled component to use. 
+
+    example: 
+
+    const [inputField, setinputField] = useState();
+
+    <input type="text" value={inputField} onChange={(e)=>setinputField(e.target.value)} />
+
+    practically Example on file => src/components/ControlledComponents.js
 
 28) Uncontrolled Components
+    Uncontrolled Components is one in which form or input field is controlled by ref or directly by dom manipulate. 
+
+        const inputRef = useRef();
+
+        const submitForm = (e) => {
+            e.preventDefault();
+            console.log(inputRef.current.value);
+            let email = document.getElementById('emailId').value;
+            console.log(email);
+        }
+
+        <form onSubmit={submitForm}>
+            <input type="text" ref={inputRef} />
+            <input type="email" id='emailId' />
+            <input type="submit" value="Login" />
+        </form>
+
+    practically Example on file => src/components/UnControlledComponents.js
+
+29) High Order Components 
+    A higher-order component (HOC) is an advanced technique in React for reusing component logic. HOCs are not part of the React API, per se. They are a pattern that emerges from React’s compositional nature.
+
+    A higher-order component is a function that takes a component and returns a new component.
+
 
 
 

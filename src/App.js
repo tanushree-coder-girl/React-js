@@ -21,6 +21,8 @@ import UseMemoHook from './components/UseMemoHook';
 import RefClassComp from './components/RefClassComp';
 import UseRefHook from './components/UseRefHook';
 import ForwardRefHook from './components/ForwardRefHook';
+import ControlledComponents from './components/ControlledComponents';
+import UnControlledComponents from './components/UnControlledComponents';
 
 function App() {
     return (
@@ -69,6 +71,10 @@ function App() {
             <UseRefHook/>
 
             <ForwardRefHook/>
+
+            <ControlledComponents/>
+
+            <UnControlledComponents/>
 
         </>
     );
