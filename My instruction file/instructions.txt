@@ -612,6 +612,103 @@
         Combination of componentDidMount , componetDidUpdate, componentWillUnmount
 
         example => 
+        useEffect(() => {
+            console.log('call when component is mount and props and state updates')
+        });
+
+        useEffect(() => {
+            console.log('only when count state updates')
+        }, [count]);
+
+        useEffect(() => {
+            console.log('call only when component mount');
+        },[]);
+       
+        practically on file src/componets/LifeCycleFunctionalCompuseEffect.js
+
+
+18. Styles
+    3 types of giving styling in react.
+    1) External css 
+    2) Internal Css or Inline Css 
+    3) Modules Css 
+
+    1) external css 
+        create separate file
+            style.css 
+        and import in component file like 
+            import './style.css';
+        use like 
+            <h1 className="heading"> Hello Everyone , External Css </h1>
+        
+    2) Inline Css 
+        <h1 style={{color:'blue', backgroundColor:'black'}}> Inline Css </h1>
+
+        Internal Css 
+            const Styling = () => {
+                const styles = {
+                    color :'yellow',
+                    backgroundColor:'purple'
+                }
+
+                return <h1 style={styles}> Internal Css </h1>
+            }
+
+    3) Modules Css 
+        create Module css file like 
+            style.module.css
+        and import in component file like 
+            import styleModules from './style.module.css'
+
+        Use like 
+        <h1 className={styleModules.success}> Module CSS</h1>
+
+    practically on file src/componets/Styling.js
+
+19) installation Bootstrap
+
+    Install using npm 
+        npm install react-bootstrap@next bootstrap@5.1.1
+    
+    Then Import In Main File index.js
+        import 'bootstrap/dist/css/bootstrap.min.css';
+
+    then use component like 
+    first import 
+        import { Button } from "react-bootstrap";
+    and use
+        <Button variant="primary">Primary</Button>
+
+    practically on file src/componets/Bootstrap.js
+
+20) Handle Array (loop an array)
+    cannot Use foreach method inside react return Statement. 
+    The map function returns an array of items and forEach just loop over them.
+    In react We always Use map method to loop an array 
+
+    const fruits = ['apple','mango','grapes'];
+    return (
+        {
+            fruits.map((fruit,index)=>{
+                return <h1 key={index}>{fruit}</h1>
+            })
+        }
+    );
+
+    practically on file src/componets/Looping.js
+
+21) React Js send data from parent to child 
+
+
+
+
+
+
+
+
+
+
+
 
 
 

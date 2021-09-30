@@ -12,6 +12,9 @@ import MountLifeCycleMethod from './components/MountLifeCycleMethod'
 import UpdateLIfeCycleMethod from './components/UpdateLifeCycleMethod';
 import UnmountLifeCycleMethod from './components/UnmountLifeCycleMethod';
 import LifeCycleFunctionalCompUseEffect from './components/LifeCycleFunctionalCompUseEffect';
+import Styling from './components/Styling';
+import Bootstrap from './components/Bootstrap';
+import Looping from './components/Looping';
 
 function App() {
     return (
@@ -42,6 +45,12 @@ function App() {
             <UnmountLifeCycleMethod />
 
             <LifeCycleFunctionalCompUseEffect />
+
+            <Styling/>
+
+            <Bootstrap />
+
+            <Looping />
 
         </>
     );
