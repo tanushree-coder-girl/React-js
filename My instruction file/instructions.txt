@@ -815,6 +815,53 @@
     A higher-order component (HOC) is an advanced technique in React for reusing component logic. HOCs are not part of the React API, per se. They are a pattern that emerges from React’s compositional nature.
 
     A higher-order component is a function that takes a component and returns a new component.
+    
+    example on file 
+    practically Example on file => src/components/HOC.js
+
+30) React Routing 
+
+    npm install react-router-dom
+
+    now add browser router in index.js 
+
+        import { BrowserRouter } from "react-router-dom";
+        ReactDOM.render(
+            <BrowserRouter>
+                <App />
+            </BrowserRouter>,
+            document.getElementById("root")
+        );
+
+    Now add switch and route in main file 
+    import { Route, Switch } from "react-router-dom";
+      <Switch>
+            <Route exact path="/"> <Home /></Route>
+            <Route exact path="/about"> <About/></Route>
+            <Route path="*"><PageNotFound /></Route>
+        </Switch>
+
+    Add Navigation links in navbar file 
+    import { NavLink } from "react-router-dom";
+        <nav>
+            <ul>
+                <li><NavLink exact to="/">Home</NavLink></li>
+                <li><NavLink exact to="/about">About</NavLink></li>
+            </ul>
+        </nav>
+
+        for dynamic routing 
+        see file 
+        src/components/Navbar.js and src/components/User.js
+
+    practically Example on file => src/components/Navbar.js
+
+31) API =
+    1) React Js Call Get Method API 
+    
+
+
+
 
 
 

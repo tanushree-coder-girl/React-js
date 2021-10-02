@@ -23,6 +23,8 @@ import UseRefHook from './components/UseRefHook';
 import ForwardRefHook from './components/ForwardRefHook';
 import ControlledComponents from './components/ControlledComponents';
 import UnControlledComponents from './components/UnControlledComponents';
+import HOC from './components/HOC';
+import Api from './components/Api';
 
 function App() {
     return (
@@ -75,6 +77,10 @@ function App() {
             <ControlledComponents/>
 
             <UnControlledComponents/>
+
+            <HOC />
+
+            <Api />
 
         </>
     );
