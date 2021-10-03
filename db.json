@@ -1,0 +1,14 @@
+{
+  "blogs": [
+    {
+      "id": 1,
+      "title": "How to earn money online",
+      "description": "using freelancing sites "
+    },
+    {
+      "id": 2,
+      "title": "how to use SEO efficiently",
+      "description": "SEO"
+    }
+  ]
+}

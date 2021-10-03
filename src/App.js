@@ -25,6 +25,8 @@ import ControlledComponents from './components/ControlledComponents';
 import UnControlledComponents from './components/UnControlledComponents';
 import HOC from './components/HOC';
 import Api from './components/Api';
+import PreviousStateFunction from './components/PreviousStateFunction';
+import PreviousPropsFunction from './components/PreviousPropsFunction';
 
 function App() {
     return (
@@ -81,6 +83,10 @@ function App() {
             <HOC />
 
             <Api />
+
+            <PreviousStateFunction />
+
+            <PreviousPropsFunction/>
 
         </>
     );

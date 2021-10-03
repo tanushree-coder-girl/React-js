@@ -857,8 +857,126 @@
     practically Example on file => src/components/Navbar.js
 
 31) API =
+    install json server for free fake api for testing 
+    npm i -g json-server 
+    npm i json-server 
+
+    now add script in package.json file 
+        "json": "json-server --watch db.json --port 4000"
+
+    now
+    npm run json 
+    and see 
+    http://localhost:4000/blogs
+
     1) React Js Call Get Method API 
-    
+     1.fetch api data
+
+            useEffect(() => {
+                fetch("http://localhost:4000/blogs").then((res) => {
+                    res.json().then((data) => {
+                        //console.log(data)
+                        setdata(data);
+                    });
+                });
+            }, []);
+
+    2. Post Api Method 
+
+            const addBlog = () => {
+                let data = { title, description };
+                fetch("http://localhost:4000/blogs", {
+                method: "POST",
+                headers: {
+                    'Accept': "application/json",
+                    'Content-type': 'application/json',
+                },
+                body: JSON.stringify(data)
+                }).then((res) => {
+                    res.json().then((resp)=>{
+                        console.log('response' + resp);
+                    })
+                });
+            };
+
+    3. Delete Api Method 
+
+            const deleteBlog = (id) => {
+                fetch(`http://localhost:4000/blogs/${id}`, {
+                    method : 'DELETE'
+                }).then((res)=>{
+                    res.json().then((resp)=>{
+                        console.log(resp)
+                    })
+                })
+            }
+        
+    4. Put Api Method used for update data
+
+        Note => difference Between Put And Patch method For update 
+            PUT is a method of modifying resource where the client sends data that updates the entire resource . PATCH is a method of modifying resources where the client sends partial data that is to be updated without modifying the entire data.
+
+        Put Api Call 
+         //Prefilled Form when update 
+            const updateBlog = (id) => {
+                let details = data[id-1]
+                setUserId(details.id)
+                settitle(details.title)
+                setdescription(details.description);
+            };
+
+        //update api called 
+            const updateData = (id) => {
+                let updatedData = {id, title, description}
+                fetch(`http://localhost:4000/blogs/${userId}`, {
+                method:'PUT',
+                headers : {
+                    'Accept' : 'application/json',
+                    'Content-type': 'application/json'
+                },
+                body: JSON.stringify(updatedData)
+                }).then((result)=>{
+                result.json().then((response)=>{
+                    console.log(response);
+                    getData();
+                    settitle("");
+                    setdescription("");
+                })
+                })
+            }
+
+    Practically Crud Example In file 
+    src/Components/Api.js 
+
+32) React Js Get the previous State in the functional components
+    const [data, setDAta] = [0]
+    setDAta((preState)=>{
+        console.log(preState)
+    })
+
+    example 
+    src/Components/PreviousStateFunction.js 
+
+33) React Js Get previous Props in the functional Components 
+
+    const PropsAnotherFun = (props) => {
+        const preProps = useRef()
+        useEffect(() => {
+            preProps.current = props.count;
+        })
+        const previousProps =  preProps.current;
+
+        return (
+            <>
+            <h1>Current Props value is {props.count}</h1>
+            <h1>Previous Props value is {previousProps}</h1>
+            </>
+        )
+    }
+    example 
+    src/Components/PreviousPropsFunction.js 
+
+34) Context API 
 
 
 
