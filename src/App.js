@@ -27,6 +27,7 @@ import HOC from './components/HOC';
 import Api from './components/Api';
 import PreviousStateFunction from './components/PreviousStateFunction';
 import PreviousPropsFunction from './components/PreviousPropsFunction';
+import Context from './components/Context';
 
 function App() {
     return (
@@ -87,6 +88,8 @@ function App() {
             <PreviousStateFunction />
 
             <PreviousPropsFunction/>
+
+            <Context />
 
         </>
     );

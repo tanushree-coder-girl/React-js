@@ -977,6 +977,27 @@
     src/Components/PreviousPropsFunction.js 
 
 34) Context API 
+    Context is designed to share data that can be considered “global” for a tree of React components, such as the current authenticated user, theme, or preferred language.
+
+    const MyContext = React.createContext(defaultValue);
+        <MyContext.Provider value={/* some value */}>
+            <Home />
+        </MyContext.Provider>
+
+        <MyContext.Consumer>
+            {
+                ({value})=>(
+                   //use value here
+                )
+            }
+        </MyContext.Consumer>
+
+        For example go to 
+        src/Components/Context.js 
+
+35)
+
+
 
 
 
