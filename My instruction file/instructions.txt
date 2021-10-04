@@ -996,7 +996,18 @@
         src/Components/Context.js 
 
 35) All React Hooks in functional Components 
-    
+    1. useState 
+    2. useReducer
+    3. useEffect
+    4. useRef
+    5. useLayoutEffect
+    6. useImperativeHandle or forwardRef
+    7. useContext
+    8. useMemo
+    9. useCallback
+
+    All Hooks use and Examples in 
+    /src/components/AllHooks/Hooks.js
 
 36) Questions and answers 
     1. What is react js? 

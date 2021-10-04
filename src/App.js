@@ -28,6 +28,7 @@ import Api from './components/Api';
 import PreviousStateFunction from './components/PreviousStateFunction';
 import PreviousPropsFunction from './components/PreviousPropsFunction';
 import Context from './components/Context';
+import Hooks from "./components/AllHooks/Hooks";
 
 function App() {
     return (
@@ -90,6 +91,8 @@ function App() {
             <PreviousPropsFunction/>
 
             <Context />
+
+            <Hooks />
 
         </>
     );
