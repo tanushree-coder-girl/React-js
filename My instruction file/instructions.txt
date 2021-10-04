@@ -995,59 +995,72 @@
         For example go to 
         src/Components/Context.js 
 
-35)
+35) All React Hooks in functional Components 
+    
 
+36) Questions and answers 
+    1. What is react js? 
+    ans=> React is a JavaScript library. use for frontend development with good speed. developed by facebook. THe current version is 17.0.2
 
+    2. What is component? 
+    ans=> A piece of code that can reuse like functions. but more powerful than function.2types: class and functional component.
 
+    3. what is class component?
+    ans=> A component that has ES6 class. More Complex and powerful than functional component. because it has a LifeCycle method and state. no needs to use hook.
 
+    4. what is functional components?
+    ans=> A component that has no es6 class. it uses a simple js function. simple and needs hooks for performing states and lifecycles methods. simple to define and Recommended. 
 
+    5. what is state?
+    ans=> information holder inside component and it store any data like a Varaible. when we update state component will rerender again but not in case of a variable. we can not use state outside of component.
 
+    6. what is props?
+    ans=> share data between components. We can send data parent to child , child to parent and in siblings component. We can not change props in receiving component.
 
+    7. what is lifecycle method.
+    ans=> some method will execute on the component mount, update, and unmount we call them lifecycle method. example= componentDidMount, componentDidMount, componentWillUnmount.
 
+    8. what are the hooks?
+    ans=> functional componets do not have state and lifecycle method. to use state and life cycle methods we can import hooks in functional componets. we cannot use hooks inside class componets.
 
+    9. what are the useState?
+    ans=> This is a hook for use state in functional components. Example
+    const [data, setData] = React.useState('initial value');
 
+    10. what is useEffect?
+    ans=> this is a hook for use lifecycles methods in a functional components
+    React.useEffect(()=>{
+        //some work
+    },[]) 
 
+    11. what is npm?
+    ans=> this is node package manager which helps us to install library in reactjs like map, form validation etc.
+    npm i package-name 
+    npm un package-name
 
+    12. what is package.json?
+    ans=> This file includes profile, application, details such as version, node package, description etc. 
 
+    13. can we use react js without npm?
+    ans=> yes we can use it like jquery also. for that we can import in it root file aur use cdn.
 
+    14. what we need to develop react app?
+    ans=> for the Recommended way we need npm , node, and any code editor. otherwise we can use CDN also.
 
+    15. can we use typescript with reactjs?
+    ans=> Yes , We can use typescript with reactjs. 
 
+    16. can we use jquery , angular, and bootstrap with react js? 
+    ans=> Yes we can, We can install packages for jquery and bootstrap. we can use react packages inside angular with npm install. 
 
+    17. can we connect react with database directly?
+    ans=> No,we need API for DB data. 
 
+    18. what is SPA? 
+    ans=> it stands for single page application with means application looks like single page and no need to refresh on jumping on other page and link. we can male single page application with reactjs, angular , vue . 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    19. what is jest? 
+    ans=> Jest is a unit testing framework. jest is Recommended and easy to use with react js.
 
      Official link of React Js documentation 
      https://reactjs.org/docs/getting-started.html
