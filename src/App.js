@@ -29,6 +29,9 @@ import PreviousStateFunction from './components/PreviousStateFunction';
 import PreviousPropsFunction from './components/PreviousPropsFunction';
 import Context from './components/Context';
 import Hooks from "./components/AllHooks/Hooks";
+import CustomHookExample from './components/AllHooks/CustomHookExample';
+import ShortCircuit from './components/ShortCircuit';
+import UseHistoryHook from './components/UseHistoryHook';
 
 function App() {
     return (
@@ -93,6 +96,12 @@ function App() {
             <Context />
 
             <Hooks />
+
+            <CustomHookExample/>
+
+            <ShortCircuit />
+
+            <UseHistoryHook />
 
         </>
     );

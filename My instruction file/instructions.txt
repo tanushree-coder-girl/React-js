@@ -1005,11 +1005,44 @@
     7. useContext
     8. useMemo
     9. useCallback
+    10. Create Custom Hook
 
     All Hooks use and Examples in 
     /src/components/AllHooks/Hooks.js
 
-36) Questions and answers 
+36) Short Circuit Evaluation in React 
+    Logical || (or)
+    logical && (and)
+
+    shorthand if else condition 
+    { isLoggedIn && <Dashboard/> }
+
+    in this condition if isLoggedIn is true then render Dashboard component 
+
+    {
+        isLoggedIn || <Home />
+    }
+    in this condition if isLoggedIn is false then render Home component 
+
+    practically example on file => src/components/ShortCircuit.js
+
+37) UseLocation and useHistory 
+    import { useLocation, useHistory } from "react-router-dom";
+
+    const location = useLocation();
+    const history = useHistory();
+    console.log(location)
+    console.log(history)
+
+    practically example on file => src/components/useHistoryHook.js
+    practically example on file => src/components/UseLocationHook.js
+
+38) All in one React icons package 
+    https://react-icons.github.io/react-icons/
+
+    npm install react-icons --save
+
+38) Questions and answers 
     1. What is react js? 
     ans=> React is a JavaScript library. use for frontend development with good speed. developed by facebook. THe current version is 17.0.2
 
